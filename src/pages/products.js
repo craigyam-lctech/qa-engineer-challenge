@@ -37,7 +37,7 @@ const ProductPage = () => {
 
   const loadProducts = useCallback(async () => {
     const response = await axios.get(`${window.location.origin
-      }/qa-engineer-challenge/products.json`)
+      }/products.json`)
 
     setProducts(response.data)
   })
@@ -58,7 +58,7 @@ const ProductPage = () => {
           <div style={{ marginLeft: '30px', border: '1px solid #bbb', display: 'inline-block' }}>
             <img
               width='120px'
-              src={'/qa-engineer-challenge/filter-instruction.png'}
+              src={'/filter-instruction.png'}
               alt='table header menu' />
           </div>
         </div>
