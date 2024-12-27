@@ -5,5 +5,5 @@ module.exports = {
   plugins: [
     `gatsby-plugin-provide-react`,
   ],
-  pathPrefix: "/qa-engineer-challenge",
+  //pathPrefix: "/qa-engineer-challenge",
 }
