@@ -128,8 +128,8 @@ const ProductPage = () => {
           style={{ marginTop: 20 }}
           rows={products}
           columns={columns}
-          pageSize={10}
-          rowsPerPageOptions={[10]}
+          pageSizeOptions={[10]}
+          //rowsPerPageOptions={[10]}
           disableSelectionOnClick={true}
           disableColumnSelector={true}
         />
