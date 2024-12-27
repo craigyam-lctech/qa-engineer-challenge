@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react"
 const columns = [
   { field: 'id',
     headerName: 'ID',
-    width: 100,
+    width: 150,
     resizable: false
   },
   {
@@ -18,15 +18,15 @@ const columns = [
   {
     field: 'name',
     headerName: 'Name',
-    width: 100,
+    width: 150,
     editable: false,
     resizable: false,
   },
   {
     field: 'inStock',
     headerName: 'In Stock',
-    type: 'number',
-    width: 100,
+    type: 'boolean',
+    width: 150,
     editable: false,
     resizable: false,
   },
@@ -34,9 +34,16 @@ const columns = [
     field: 'price',
     headerName: 'Price',
     type: 'number',
-    width: 80,
+    width: 150,
     editable: false,
     resizable: false,
+    valueFormatter: (params) => {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'HKD',
+                minimumFractionDigits: 2,
+            }).format(params);
+        }
   },
 ]
 
