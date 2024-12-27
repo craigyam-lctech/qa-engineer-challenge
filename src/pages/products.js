@@ -3,32 +3,40 @@ import { DataGrid } from '@mui/x-data-grid'
 import { useCallback, useEffect, useState } from "react"
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 150 },
+  { field: 'id',
+    headerName: 'ID',
+    width: 100,
+    resizable: false
+  },
   {
     field: 'categories',
     headerName: 'Categories',
-    width: 450,
+    width: 250,
     editable: false,
+    resizable: false,
   },
   {
     field: 'name',
     headerName: 'Name',
-    width: 150,
+    width: 100,
     editable: false,
+    resizable: false,
   },
   {
     field: 'inStock',
     headerName: 'In Stock',
     type: 'number',
-    width: 150,
+    width: 100,
     editable: false,
+    resizable: false,
   },
   {
     field: 'price',
     headerName: 'Price',
     type: 'number',
-    width: 110,
+    width: 80,
     editable: false,
+    resizable: false,
   },
 ]
 
@@ -128,8 +136,11 @@ const ProductPage = () => {
           style={{ marginTop: 20 }}
           rows={products}
           columns={columns}
-          pageSizeOptions={[10]}
-          //rowsPerPageOptions={[10]}
+          pageSizeOptions={[10, 25]}
+          initialState={{
+          pagination: {
+            paginationModel: { pageSize: 10 } },
+          }}
           disableSelectionOnClick={true}
           disableColumnSelector={true}
         />
